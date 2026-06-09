@@ -47,3 +47,8 @@ Resources:
           git clone https://github.com/yazenAlbu/101-kittens-carousel-static-website-ec2.git
           cp -r 101-kittens-carousel-static-website-ec2/static-web/* /var/www/html/
           systemctl restart httpd
+Outputs:
+  WebsiteURL:
+    Description: Kittens Carousel Website URL
+    Value: !Sub http://${WebServerInstance.PublicDnsName}
+    
